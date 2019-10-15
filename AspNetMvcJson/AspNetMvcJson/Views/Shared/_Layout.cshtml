@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="navbar navbar-fixed-top bg-primary ">
+        <div class="container">
+            <div class="navbar-btn">
+                @Html.ActionLink("Home", "Index", "Usuario", new { area = "" }, new { @class = "btn btn-info" })
+                @Html.ActionLink("+ Novo Usuario", "Create", "Usuario", new { area = "" }, new { @class = "btn btn-info" })
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer class="panel-footer footer">
+            <h5>&copy; @DateTime.Now.Year - MarketData Teste</h5>
+            <h6>Desenvolvedor - Caio Celso</h6>
+
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

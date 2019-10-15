@@ -1,0 +1,40 @@
+﻿@model AspNetMvcJson.Models.Usuarios
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Deletar Usuario</h2>
+
+<h3>Tem certeza que você quer deletar este usuario?</h3>
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            @Html.ActionLink("Voltar", "Index", new { area = "" }, new { @class = "btn btn-info" })
+        </div>
+    }
+</div>
